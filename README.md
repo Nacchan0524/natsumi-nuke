@@ -18,6 +18,8 @@ AWS Nukeというオープンソースのツールを実行するためのワー
   「Send message to Slack」ジョブで実際にslackへ送信　
   という流れで処理が進んでいます。
 
+  ・参考記事： https://dev.classmethod.jp/articles/githubactions-aws-nuke/
+
 
 ## nuke-config.yml
 
@@ -29,6 +31,8 @@ AWS Nukeというオープンソースのツールを実行するためのワー
 ## incoming-webhook.yml
 
   ・GitHubからslackへ文章を送信するためのワークフローファイルです
+
+  ・GitHub内のsecretsに「SLACK_INCOMING_WEBHOOK_URL」という名前でIncoming Webhooksから発行されたWebhook URLを定義してください
   
   ・github/workflows/incoming-webhook.ymlにファイルを保存してください
 
