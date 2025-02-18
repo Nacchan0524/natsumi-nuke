@@ -1,9 +1,8 @@
 # natsumi-nuke
-For AWS Nuke
 
 AWS Nukeというオープンソースのツールを実行するためのワークフローファイルと定義ファイル(nuke-configファイル)です。
 
-nuke-workflow.yaml:
+## nuke-workflow.yaml:
 
   ・runs-on: の部分はOrganizationsのランナーに変えて使用してください。
   
@@ -20,13 +19,14 @@ nuke-workflow.yaml:
   という流れで処理が進んでいます。
 
 
-nuke-config.yml
+## nuke-config.yml
 
   ・NukeのGitHubリポジトリ： https://github.com/ekristen/aws-nuke
   
   ・Nukeで実際に削除するリソースを指定しています
 
-incoming-webhook.yml
+
+## incoming-webhook.yml
 
   ・GitHubからslackへ文章を送信するためのワークフローファイルです
   
