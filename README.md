@@ -19,7 +19,23 @@ nuke-workflow.yaml:
   「Send message to Slack」ジョブで実際にslackへ送信　
   という流れで処理が進んでいます。
 
+
 nuke-config.yml
 
   ・NukeのGitHubリポジトリ： https://github.com/ekristen/aws-nuke
+  
   ・Nukeで実際に削除するリソースを指定しています
+
+incoming-webhook.yml
+
+  ・GitHubからslackへ文章を送信するためのワークフローファイルです
+  
+  ・github/workflows/incoming-webhook.ymlにファイルを保存してください
+
+  ・参考記事：　https://qiita.com/seratch/items/28d09eacada09134c96c
+
+  
+  
+
+  
+  
