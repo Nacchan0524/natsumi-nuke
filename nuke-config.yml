@@ -1,0 +1,589 @@
+regions:
+  - global
+  - us-east-1 # バージニア北部
+  - us-east-2 # オハイオ
+  - us-west-1 # 北カルフォルニア
+  - us-west-2 # オレゴン
+  - ap-south-1 # ムンバイ
+  - ap-northeast-3 # 大阪
+  - ap-northeast-2 # ソウル
+  - ap-southeast-1 # シンガポール
+  - ap-southeast-2 # シドニー
+  - ap-northeast-1 # 東京
+  - ca-central-1 # カナダ中部
+  - eu-central-1 # フランクフルト
+  - eu-west-1 # アイルランド
+  - eu-west-2 # ロンドン
+  - eu-west-3 # パリ
+  - eu-north-1 # ストックホルム
+  - sa-east-1 # サンパウロ
+
+blocklist:
+  - 999999999999
+
+resource-types:
+  includes:
+    - AMGWorkspace
+    - AMPWorkspace
+    - AWS::ApiGateway::ApiKey
+    - AWS::ApiGateway::ClientCertificate
+    - APIGatewayDomainName
+    - APIGatewayRestAPI
+    - AWS::ApiGateway::UsagePlan
+    - APIGatewayV2API
+    - APIGatewayV2VpcLink
+    - APIGatewayVpcLink
+    - AWSBackupPlan
+    - AWSBackupRecoveryPoint
+    - AWSBackupSelection
+    - AWSBackupVaultAccessPolicy
+    - AWS::AccessAnalyzer::Analyzer
+    - AccessAnalyzerArchiveRule
+    - AmplifyApp
+    - AppConfigApplication
+    - AppConfigConfigurationProfile
+    - AppConfigDeploymentStrategy
+    - AppConfigEnvironment
+    - AppConfigHostedConfigurationVersion
+    - AppMeshGatewayRoute
+    - AppMeshMesh
+    - AppMeshRoute
+    - AppMeshVirtualGateway
+    - AppMeshVirtualNode
+    - AppMeshVirtualRouter
+    - AppMeshVirtualService
+    - AppRegistryApplication
+    - AppRunnerConnection
+    - AppRunnerService
+    - AppStreamDirectoryConfig
+    - AppStreamFleet
+    - AppStreamFleetState
+    - AppStreamImage
+    - AppStreamImageBuilder
+    - AppStreamImageBuilderWaiter
+    - AppStreamStack
+    - AppStreamStackFleetAttachment
+    - AppSyncGraphqlAPI
+    - ApplicationAutoScalingScalableTarget
+    - AthenaDataCatalog
+    - AthenaNamedQuery
+    - AthenaPreparedStatement
+    - AthenaWorkGroup
+    - AutoScalingGroup
+    - AutoScalingLaunchConfiguration
+    - AutoScalingLifecycleHook
+    - AutoScalingPlansScalingPlan
+    - BackupReportPlan
+    - BackupVault
+    - BatchComputeEnvironment
+    - BatchComputeEnvironmentState
+    - BatchJobQueue
+    - BatchJobQueueState
+    - BedrockAgent
+    - BedrockCustomModel
+    - BedrockDataSource
+    - BedrockEvaluationJob
+    - BedrockGuardrail
+    - BedrockKnowledgeBase
+    - BedrockModelCustomizationJob
+    - BedrockModelInvocationLoggingConfiguration
+    - BedrockPrompt
+    - BedrockProvisionedModelThroughput
+    - BillingCostandUsageReport
+    - BudgetsBudget
+    - Cloud9Environment
+    - CloudDirectoryDirectory
+    - CloudDirectorySchema
+    - CloudFormationStack
+    - CloudFormationStackSet
+    - CloudFormationType
+    - CloudFrontCachePolicy
+    - CloudFrontDistribution
+    - CloudFrontDistributionDeployment
+    - CloudFrontFunction
+    - CloudFrontKeyGroup
+    - CloudFrontOriginAccessControl
+    - CloudFrontOriginAccessIdentity
+    - CloudFrontOriginRequestPolicy
+    - CloudFrontPublicKey
+    - CloudFrontResponseHeadersPolicy
+    - CloudHSMV2Cluster
+    - CloudHSMV2ClusterHSM
+    - CloudTrailTrail
+    - CloudWatchAlarm
+    - CloudWatchAnomalyDetector
+    - CloudWatchDashboard
+    - CloudWatchEventsBuses
+    - CloudWatchEventsRule
+    - CloudWatchEventsTarget
+    - CloudWatchInsightRule
+    - CloudWatchLogsDestination
+    - CloudWatchLogsLogGroup
+    - CloudWatchLogsResourcePolicy
+    - CloudWatchRUMApp
+    - CodeArtifactDomain
+    - CodeArtifactRepository
+    - CodeBuildBuild
+    - CodeBuildBuildBatch
+    - CodeBuildProject
+    - CodeBuildReport
+    - CodeBuildReportGroup
+    - CodeBuildSourceCredential
+    - CodeCommitRepository
+    - CodeDeployApplication
+    - CodeDeployDeploymentConfig
+    - CodeDeployDeploymentGroup
+    - CodeGuruProfilingGroup
+    - CodeGuruReviewerRepositoryAssociation
+    - CodePipelineCustomActionType
+    - CodePipelinePipeline
+    - CodePipelineWebhook
+    - CognitoIdentityPool
+    - CognitoIdentityProvider
+    - CognitoUserPool
+    - CognitoUserPoolClient
+    - CognitoUserPoolDomain
+    - ComprehendDocumentClassifier
+    - ComprehendDominantLanguageDetectionJob
+    - ComprehendEndpoint
+    - ComprehendEntitiesDetectionJob
+    - ComprehendEntityRecognizer
+    - ComprehendEventsDetectionJob
+    - ComprehendKeyPhrasesDetectionJob
+    - ComprehendPiiEntitiesDetectionJob
+    - ComprehendSentimentDetectionJob
+    - ComprehendTargetedSentimentDetectionJob
+    - ConfigServiceConfigRule
+    - ConfigServiceConfigurationRecorder
+    - ConfigServiceConformancePack
+    - ConfigServiceDeliveryChannel
+    - DAXCluster
+    - DAXParameterGroup
+    - DAXSubnetGroup
+    - DataPipelinePipeline
+    - DatabaseMigrationServiceCertificate
+    - DatabaseMigrationServiceEndpoint
+    - DatabaseMigrationServiceEventSubscription
+    - DatabaseMigrationServiceReplicationInstance
+    - DatabaseMigrationServiceReplicationTask
+    - DatabaseMigrationServiceSubnetGroup
+    - DeviceFarmProject
+    - DirectoryServiceDirectory
+    - DynamoDBBackup
+    - DynamoDBTable
+    - DynamoDBTableItem
+    - EC2Address
+    - EC2ClientVpnEndpoint
+    - EC2ClientVpnEndpointAttachment
+    - EC2CustomerGateway
+    - EC2DHCPOption
+    - EC2DefaultSecurityGroupRule
+    - EC2EgressOnlyInternetGateway
+    - EC2Host
+    - EC2Image
+    - EC2Instance
+    - EC2InstanceConnectEndpoint
+    - EC2InternetGateway
+    - EC2InternetGatewayAttachment
+    - EC2KeyPair
+    - EC2LaunchTemplate
+    - EC2NATGateway
+    - EC2NetworkACL
+    - EC2NetworkInterface
+    - EC2PlacementGroup
+    - EC2RouteTable
+    - EC2SecurityGroup
+    - EC2Snapshot
+    - EC2SpotFleetRequest
+    - EC2Subnet
+    - EC2TGW
+    - EC2TGWAttachment
+    - EC2TGWConnectPeer
+    - AWS::EC2::VPC
+    - EC2VPCEndpoint
+    - EC2VPCEndpointConnection
+    - EC2VPCEndpointServiceConfiguration
+    - EC2VPCPeeringConnection
+    - EC2VPNConnection
+    - EC2VPNGateway
+    - EC2VPNGatewayAttachment
+    - EC2Volume
+    - AWS::ECR::PublicRepository
+    - AWS::ECR::Repository
+    - ECSCapacityProvider
+    - ECSCluster
+    - ECSClusterInstance
+    - ECSService
+    - ECSTask
+    - ECSTaskDefinition
+    - EFSFileSystem
+    - EFSMountTarget
+    - EKSCluster
+    - EKSFargateProfile
+    - EKSNodegroup
+    - ELB
+    - ELBv2
+    - ELBv2ListenerRule
+    - ELBv2TargetGroup
+    - EMRCluster
+    - EMRSecurityConfiguration
+    - ESDomain
+    - ElasticBeanstalkApplication
+    - ElasticBeanstalkEnvironment
+    - ElasticacheCacheCluster
+    - ElasticacheCacheParameterGroup
+    - ElasticacheReplicationGroup
+    - ElasticacheSubnetGroup
+    - ElasticacheUser
+    - ElasticacheUserGroup
+    - FSxBackup
+    - FSxFileSystem
+    - FirehoseDeliveryStream
+    - GameLiftBuild
+    - GameLiftFleet
+    - GameLiftMatchmakingConfiguration
+    - GameLiftMatchmakingRuleSet
+    - GameLiftQueue
+    - GlobalAccelerator
+    - GlobalAcceleratorEndpointGroup
+    - GlobalAcceleratorListener
+    - GlueBlueprint
+    - GlueClassifier
+    - GlueConnection
+    - GlueCrawler
+    - GlueDataBrewDatasets
+    - GlueDataBrewJobs
+    - GlueDataBrewProjects
+    - GlueDataBrewRecipe
+    - GlueDataBrewRulesets
+    - GlueDataBrewSchedules
+    - GlueDatabase
+    - GlueDevEndpoint
+    - GlueJob
+    - GlueMLTransform
+    - GlueSecurityConfiguration
+    - GlueSession
+    - GlueTrigger
+    - GlueWorkflow
+    - GuardDutyDetector
+    - IAMAccountSettingPasswordPolicy
+    - IAMGroup
+    - IAMGroupPolicy
+    - IAMGroupPolicyAttachment
+    - IAMInstanceProfile
+    - IAMInstanceProfileRole
+    - IAMLoginProfile
+    - IAMOpenIDConnectProvider
+    - IAMPolicy
+    - IAMRole
+    - IAMRolePolicy
+    - IAMRolePolicyAttachment
+    - IAMRolesAnywhereCRL
+    - IAMRolesAnywhereProfile
+    - IAMRolesAnywhereTrustAnchor
+    - IAMSAMLProvider
+    - IAMServerCertificate
+    - IAMServiceSpecificCredential
+    - IAMSigningCertificate
+    - IAMUser
+    - IAMUserAccessKey
+    - IAMUserGroupAttachment
+    - IAMUserHTTPSGitCredential
+    - IAMUserMFADevice
+    - IAMUserPolicy
+    - IAMUserPolicyAttachment
+    - IAMUserSSHPublicKey
+    - IAMVirtualMFADevice
+    - ImageBuilderComponent
+    - ImageBuilderDistributionConfiguration
+    - ImageBuilderImage
+    - ImageBuilderInfrastructureConfiguration
+    - ImageBuilderPipeline
+    - ImageBuilderRecipe
+    - Inspector2
+    - InspectorAssessmentRun
+    - InspectorAssessmentTarget
+    - InspectorAssessmentTemplate
+    - IoTAuthorizer
+    - IoTCACertificate
+    - IoTCertificate
+    - IoTJob
+    - IoTOTAUpdate
+    - IoTPolicy
+    - IoTRoleAlias
+    - IoTSiteWiseAccessPolicy
+    - IoTSiteWiseAsset
+    - IoTSiteWiseAssetModel
+    - IoTSiteWiseDashboard
+    - IoTSiteWiseGateway
+    - IoTSiteWisePortal
+    - IoTSiteWiseProject
+    - IoTStream
+    - IoTThing
+    - IoTThingGroup
+    - IoTThingType
+    - IoTThingTypeState
+    - IoTTopicRule
+    - IoTTwinMakerComponentType
+    - IoTTwinMakerEntity
+    - IoTTwinMakerScene
+    - IoTTwinMakerSyncJob
+    - IoTTwinMakerWorkspace
+    - KendraIndex
+    - KinesisAnalyticsApplication
+    - KinesisStream
+    - KinesisVideoProject
+    - LambdaEventSourceMapping
+    - LambdaFunction
+    - LambdaLayer
+    - LexBot
+    - LexIntent
+    - LexModelBuildingServiceBotAlias
+    - LexSlotType
+    - LightsailDisk
+    - LightsailDomain
+    - LightsailInstance
+    - LightsailKeyPair
+    - LightsailLoadBalancer
+    - LightsailStaticIP
+    - MGNJob
+    - MGNSourceServer
+    - MQBroker
+    - MSKCluster
+    - MSKConfiguration
+    - MachineLearningBranchPrediction
+    - MachineLearningDataSource
+    - MachineLearningEvaluation
+    - MachineLearningMLModel
+    - Macie
+    - ManagedBlockchainMember
+    - MediaConvertJobTemplate
+    - MediaConvertPreset
+    - MediaConvertQueue
+    - MediaLiveChannel
+    - MediaLiveInput
+    - MediaLiveInputSecurityGroup
+    - MediaPackageChannel
+    - MediaPackageOriginEndpoint
+    - MediaStoreContainer
+    - MediaStoreDataItems
+    - MediaTailorConfiguration
+    - MemoryDBACL
+    - MemoryDBCluster
+    - MemoryDBParameterGroup
+    - MemoryDBSubnetGroup
+    - MemoryDBUser
+    - NeptuneCluster
+    - NeptuneInstance
+    - NeptuneSnapshot
+    - NetworkManagerConnectPeer
+    - NetworkManagerCoreNetwork
+    - NetworkManagerGlobalNetwork
+    - NetworkManagerNetworkAttachment
+    - OSCollection
+    - OSDomain
+    - OSPackage
+    - OSPipeline
+    - OSVPCEndpoint
+    - PinpointApp
+    - PinpointPhoneNumber
+    - PipesPipe
+    - PollyLexicon
+    - QLDBLedger
+    - QuickSightSubscription
+    - QuickSightUser
+    - RDSClusterSnapshot
+    - RDSDBCluster
+    - RDSDBClusterParameterGroup
+    - RDSDBParameterGroup
+    - RDSDBSubnetGroup
+    - RDSEventSubscription
+    - RDSInstance
+    - RDSOptionGroup
+    - RDSProxy
+    - RDSSnapshot
+    - RedshiftCluster
+    - RedshiftParameterGroup
+    - RedshiftScheduledAction
+    - RedshiftServerlessNamespace
+    - RedshiftServerlessSnapshot
+    - RedshiftServerlessWorkgroup
+    - RedshiftSnapshot
+    - RedshiftSnapshotSchedule
+    - RedshiftSubnetGroup
+    - RekognitionCollection
+    - RekognitionDataset
+    - RekognitionProject
+    - ResourceExplorer2Index
+    - ResourceExplorer2View
+    - ResourceGroupGroup
+    - Route53HealthCheck
+    - Route53HostedZone
+    - Route53Profile
+    - Route53ProfileAssociation
+    - Route53ResolverEndpoint
+    - Route53ResolverRule
+    - Route53ResourceRecordSet
+    - Route53TrafficPolicy
+    - S3AccessGrantsGrant
+    - S3AccessGrantsInstance
+    - S3AccessGrantsLocation
+    - S3AccessPoint
+    - AWS::S3::Bucket
+    - S3MultipartUpload
+    - SESConfigurationSet
+    - SESIdentity
+    - SESReceiptFilter
+    - SESReceiptRuleSet
+    - SESTemplate
+    - SFNStateMachine
+    - SQSQueue
+    - SSMActivation
+    - SSMAssociation
+    - SSMDocument
+    - SSMMaintenanceWindow
+    - SSMParameter
+    - SSMPatchBaseline
+    - SSMQuickSetupConfigurationManager
+    - SSMResourceDataSync
+    - SageMakerApp
+    - SageMakerDomain
+    - SageMakerEndpoint
+    - SageMakerEndpointConfig
+    - SageMakerModel
+    - SageMakerNotebookInstance
+    - SageMakerNotebookInstanceLifecycleConfig
+    - SageMakerNotebookInstanceState
+    - SageMakerSpace
+    - SageMakerUserProfiles
+    - SchedulerSchedule
+    - SecretsManagerSecret
+    - SecurityHub
+    - ServiceCatalogConstraintPortfolioAttachment
+    - ServiceCatalogPortfolio
+    - ServiceCatalogPortfolioProductAttachment
+    - ServiceCatalogPortfolioShareAttachment
+    - ServiceCatalogPrincipalPortfolioAttachment
+    - ServiceCatalogProduct
+    - ServiceCatalogProvisionedProduct
+    - ServiceCatalogTagOption
+    - ServiceCatalogTagOptionPortfolioAttachment
+    - ServiceDiscoveryInstance
+    - ServiceDiscoveryNamespace
+    - ServiceDiscoveryService
+    - SignerSigningJob
+    - SimpleDBDomain
+    - StorageGatewayFileShare
+    - StorageGatewayGateway
+    - StorageGatewayTape
+    - StorageGatewayVolume
+    - TranscribeCallAnalyticsCategory
+    - StorageGatewayTape
+    - StorageGatewayVolume
+    - TranscribeCallAnalyticsCategory
+    - TranscribeCallAnalyticsJob
+    - TranscribeLanguageModel
+    - TranscribeMedicalTranscriptionJob
+    - TranscribeMedicalVocabulary
+    - TranscribeTranscriptionJob
+    - TranscribeVocabulary
+    - TranscribeVocabularyFilter
+    - TransferServer
+    - TransferServerUser
+    - TransferWebApp
+    - WAFRegionalByteMatchSet
+    - WAFRegionalByteMatchSetIP
+    - WAFRegionalIPSet
+    - WAFRegionalIPSetIP
+    - WAFRegionalRateBasedRule
+    - WAFRegionalRateBasedRulePredicate
+    - WAFRegionalRegexMatchSet
+    - WAFRegionalRegexMatchTuple
+    - WAFRegionalRegexPatternSet
+    - WAFRegionalRegexPatternString
+    - WAFRegionalRule
+    - WAFRegionalRuleGroup
+    - WAFRegionalRulePredicate
+    - WAFRegionalWebACL
+    - WAFRegionalWebACLRuleAttachment
+    - WAFRule
+    - WAFWebACL
+    - WAFWebACLRuleAttachment
+    - WAFv2APIKey
+    - WAFv2IPSet
+    - WAFv2RegexPatternSet
+    - WAFv2RuleGroup
+    - WAFv2WebACL
+    - WorkSpacesWorkspace
+    - XRayGroup
+    - XRaySamplingRule
+    - CodeStarConnection #サービス終了のため
+    - CodeStarNotificationRule #サービス終了のため
+
+  excludes:
+    - AWS::AppFlow::ConnectorProfile # Cloud controlリソースのため
+    - AWS::AppFlow::Flow # Cloud controlリソースのため
+    - AWS::AppRunner::Service # Cloud controlリソースのため
+    - AWS::ApplicationInsights::Application # Cloud controlリソースのため
+    - AWS::Backup::Framework # Cloud controlリソースのため
+    - AWS::ECR::PublicRepository # Cloud controlリソースのため
+    - AWS::ECR::PullThroughCacheRule # Cloud controlリソースのため
+    - AWS::ECR::RegistryPolicy # Cloud controlリソースのため
+    - AWS::ECR::ReplicationConfiguration # Cloud controlリソースのため
+    - AWS::MWAA::Environment # Cloud controlリソースのため
+    - AWS::NetworkFirewall::Firewall # Cloud controlリソースのため
+    - AWS::NetworkFirewall::FirewallPolicy # Cloud controlリソースのため
+    - AWS::NetworkFirewall::RuleGroup # Cloud controlリソースのため
+    - AWS::Synthetics::Canary # Cloud controlリソースのため
+    - AWS::Timestream::Database # Cloud controlリソースのため
+    - AWS::Timestream::ScheduledQuery # Cloud controlリソースのため
+    - AWS::Timestream::Table # Cloud controlリソースのため
+    - AWS::Transfer::Workflow # Cloud controlリソースのため
+    - CloudWatchEventsBuses # タグによるフィルタリングが未対応のため
+    - CloudWatchEventsRule # タグによるフィルタリングが未対応のため
+    - CloudWatchEventsTarget # タグによるフィルタリングが未対応のため
+    - CloudTrailTrail # 社内規約に添わせるため
+    - ConfigServiceConfigRule # 社内規約に添わせるため
+    - ConfigServiceConfigurationRecorder # 社内規約に添わせるため
+    - ConfigServiceDeliveryChannel # 社内規約に添わせるため
+    - SecurityHub # 社内規約に添わせるため
+    - CloudWatchAlarm # 社内規約に添わせるため
+    - CloudWatchDashboard # 社内規約に添わせるため
+    - CloudWatchLogsDestination # 社内規約に添わせるため
+    - CloudWatchLogsLogGroup # 社内規約に添わせるため
+    - CloudWatchLogsResourcePolicy # 社内規約に添わせるため
+    - CloudWatchRUMApp # 社内規約に添わせるため
+    - SNSEndpoint # 社内規約に添わせるため
+    - SNSPlatformApplication # 社内規約に添わせるため
+    - SNSSubscription # 社内規約に添わせるため
+    - SNSTopic # 社内規約に添わせるため
+    - RoboMakerRobotApplication #サービス終了のため
+    - RoboMakerSimulationApplication #サービス終了のため
+    - RoboMakerSimulationJob #サービス終了のため
+    - ElasticTranscoderPipeline #サービス終了のため
+    - ElasticTranscoderPreset #サービス終了のため
+    - CloudSearchDomain #サービス終了のため
+    - OpsWorksApp #サービス終了のため
+    - OpsWorksCMBackup #サービス終了のため
+    - OpsWorksCMServer #サービス終了のため
+    - OpsWorksCMServerState #サービス終了のため
+    - OpsWorksInstance #サービス終了のため
+    - OpsWorksLayer #サービス終了のため
+    - OpsWorksUserProfile #サービス終了のため
+    - CodeStarProject #サービス終了のため
+    - FMSNotificationChannel #エラー発生するため
+    - FMSPolicy #エラー発生するため
+    - ACMCertificate #エラー発生するため
+    - AWS::ACMPCA::CertificateAuthority #エラー発生するため
+    - ACMPCACertificateAuthorityState #エラー発生するため
+    - KMSAlias #社内規約に添わせるため
+    - KMSKey #社内規約に添わせるため
+    - S3Object #消されたくないオブジェクトがあるため
+
+accounts:
+  #対象のAWSアカウント番号 :
+    filters:
+      __global__:
+        - type: glob
+          property: tag:  #任意のタグ名
+          value: " #任意のバリュー名 "
