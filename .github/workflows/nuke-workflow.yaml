@@ -1,0 +1,66 @@
+name: nuke-dry-run-to-slack-educross
+on: push
+
+env:
+  AWS_NUKE_VERSION: 3.29.1
+  NUKE_OUTPUT: "None"
+
+jobs:
+  run_aws_nuke:
+    name: Run aws-nuke
+    runs-on: #Organizationsのランナー名を入れる
+    permissions:
+      id-token: write
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ vars.NUKE_ARN }}
+          aws-region: ap-northeast-1
+          
+      - name: Install AWS Nuke
+        run: |
+          wget https://github.com/ekristen/aws-nuke/releases/download/v${{ env.AWS_NUKE_VERSION }}/aws-nuke-v${{ env.AWS_NUKE_VERSION }}-linux-amd64.tar.gz
+          tar -xvf aws-nuke-v${{ env.AWS_NUKE_VERSION }}-linux-amd64.tar.gz
+          # 実行ファイルの存在を確認
+          ls -la  # 展開したファイルをリスト表示
+          ./aws-nuke version  # 正しいコマンドを実行
+
+      - name: Run aws-nuke
+        id: run_nuke
+        run: |
+          ./aws-nuke nuke -c ./nuke-config.yml --no-dry-run --no-prompt > output.txt
+
+      - name: Save output from aws-nuke
+        id: save_output
+        run: |
+          grep "would remove" output.txt | awk -F" - " '{print $2, $3, $5}' > filtered_output.txt
+          cat filtered_output.txt
+          
+          # ファイルの内容を整形 - 改行を環境変数に設定
+          OUTPUT=$(awk '{print $0 "\\n"}' filtered_output.txt | tr -d '\n')
+          echo "FILTERED_OUTPUT=$OUTPUT" >> $GITHUB_ENV  # 環境変数ファイルに設定
+
+      - name: Send output to Slack
+        run: |
+          if [ -z "${{ env.FILTERED_OUTPUT }}" ]; then
+            MESSAGE="今週の削除対象リソースはありません"
+          else
+            MESSAGE="今週の削除対象リソースは以下です:\\n${{ env.FILTERED_OUTPUT }}"
+          fi
+          
+          echo "SLACK_MESSAGE=$MESSAGE" >> $GITHUB_ENV  # Slackに送信するメッセージを環境変数に設定
+
+      - name: Send message to Slack
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "${{ env.SLACK_MESSAGE }}"
+            }
