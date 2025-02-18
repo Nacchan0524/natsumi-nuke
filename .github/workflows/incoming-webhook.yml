@@ -1,0 +1,16 @@
+name: Slack Incoming Webhooks
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: #Organizationsのランナーを設定
+    steps:
+      - name: Send no message to Slack
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_INCOMING_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {}
